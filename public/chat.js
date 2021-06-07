@@ -1,4 +1,4 @@
-const connection = new WebSocket("ws://3d-connect-4.glitch.me:80/chat");
+const connection = new WebSocket("wss://3d-connect-4.glitch.me/chat");
 const button = document.querySelector("#send");
 
 connection.onopen = (event) => {
