@@ -2,7 +2,7 @@ let gamestate = [];
 let gameOver = false;
 let victoryResult = null;
 
-const connection = new WebSocket("ws://3d-connect-4.glitch.me:80/game");
+const connection = new WebSocket("wss://3d-connect-4.glitch.me:80/");
 const $connectionStatus = document.querySelector('.connection-status');
 connection.onopen = (event) => {
   $connectionStatus.innerHTML = 'connected';

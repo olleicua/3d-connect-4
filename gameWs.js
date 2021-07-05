@@ -130,5 +130,7 @@ module.exports = (app) => {
       
       resetting = false;
     });
+
+    console.log('ok')
   });
 };
