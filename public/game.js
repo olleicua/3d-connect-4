@@ -332,6 +332,8 @@ function touchStarted() {
   mousePressed();
 }
 
+let currentMouseDrag = null;
+
 // p5.js calls this when a click happens on the canvas
 function mousePressed() {
   let pixel = new Uint8Array(4);
@@ -345,9 +347,22 @@ function mousePressed() {
     handlePieceClick(pixel[0], pixel[1], pixel[2]);
   }
   
-  return false
+  currentMouseDrag = { x: mouseX, y: mouseY, camera: cameraAngle };
+  
+  return false;
 }
 
-function mouseDragged(event) {
-  console.log(event)
+function mouseDragged() {
+  updateRotation();
+}
+
+function mouseReleased() {
+  updateRotation();
+  currentMouseDragX = null;
+  currentMouseDragY = null;
+}
+
+function updateRotation() {
+  if (!currentMouseDragX || !currentMouseDragY) return;
+  
 }
