@@ -347,3 +347,7 @@ function mousePressed() {
   
   return false
 }
+
+function mouseDragged(event) {
+  console.log(event)
+}
