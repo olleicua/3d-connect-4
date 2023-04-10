@@ -307,6 +307,7 @@ function drawGame() {
 
 // p5.js calls this function to update the canvas once per frame
 function draw() {
+  
   selectionCanvas.reset();
   
   ambientLight(127, 127, 63);
@@ -352,13 +353,10 @@ function mousePressed() {
   return false;
 }
 
-function mouseDragged() {
-  updateRotation();
-}
-
 function mouseReleased() {
-  updateRotation();
   currentMouseDrag = null;
+
+  return false;
 }
 
 
@@ -366,7 +364,7 @@ function updateRotation() {
   if (!currentMouseDrag) return;
 
   const dragDistancePerTurn = width / 2;
-  const 
-  const theta = lerp(0, TAU, mouseX - currentMouseDrag.x);
+  const dragDistance = (mouseX - currentMouseDrag.x) / dragDistancePerTurn;
+  const theta = lerp(0, TAU, dragDistance);
   cameraAngle = currentMouseDrag.cameraAngle + theta;
 }
