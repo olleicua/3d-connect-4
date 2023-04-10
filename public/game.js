@@ -6,7 +6,7 @@
    background, WEBGL, box, keyCode, LEFT_ARROW, RIGHT_ARROW,
    rotateX, rotateZ, keyIsPressed, plane, translate, camera,
    ortho, push, pop, cylinder, createGraphics, mouseX, mouseY,
-   pixelDensity, pointLight, ambientMaterial, ambientLight */
+   pixelDensity, pointLight, ambientMaterial, ambientLight, lerp */
 
 // DEFINED in remote.js OR in_person.js
 /* global handlePieceClick, checkVictory, gamestate, gameOver, victoryResult */
@@ -347,7 +347,7 @@ function mousePressed() {
     handlePieceClick(pixel[0], pixel[1], pixel[2]);
   }
   
-  currentMouseDrag = { x: mouseX, y: mouseY, camera: cameraAngle };
+  currentMouseDrag = { x: mouseX, camera: cameraAngle };
   
   return false;
 }
@@ -358,11 +358,15 @@ function mouseDragged() {
 
 function mouseReleased() {
   updateRotation();
-  currentMouseDragX = null;
-  currentMouseDragY = null;
+  currentMouseDrag = null;
 }
 
+
 function updateRotation() {
-  if (!currentMouseDragX || !currentMouseDragY) return;
-  
+  if (!currentMouseDrag) return;
+
+  const dragDistancePerTurn = width / 2;
+  const 
+  const theta = lerp(0, TAU, mouseX - currentMouseDrag.x);
+  cameraAngle = currentMouseDrag.cameraAngle + theta;
 }
