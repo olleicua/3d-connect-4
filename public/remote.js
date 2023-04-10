@@ -22,7 +22,7 @@ let checkVictory;
 connection.onmessage = (event) => {
   const message = JSON.parse(event.data);
 
-  document.querySelector('.connection-count').innerHTML = `people: ${message.connection_count}`;
+  document.querySelector('.connection-count').innerHTML = `(people: ${message.connection_count})`;
   
   if (message.reset) {
     gameOver = false;
