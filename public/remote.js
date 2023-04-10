@@ -9,7 +9,7 @@ connection.onopen = (event) => {
 };
 
 connection.onclose = (event) => {
-  $connectionStatus.innerHTML = 'connection closed';
+  $connectionStatus.innerHTML = 'connection closed <a href="">reconnect</a>';
 };
 
 connection.onerror = (event) => {
