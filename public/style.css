@@ -61,12 +61,12 @@ body {
 
 .clockwise-button {
   transform: scaleX(-1);
-  background-image: url(https://cdn.glitch.com/61ae5b6a-e084-43e1-9667-ae000b4f3e81%2F498-4980685_3d-rotate-icon-3d-rotation-icon-png-transparent.png?v=1619382058528);
+  background-image: url(https://i.postimg.cc/65Dm8tzt/61ae5b6a-e084-43e1-9667-ae000b4f3e81-498-4980685-3d-rotate-icon-3d-rotation-icon-png-transparent.png);
   background-size: 100% 100%;
 }
 
 .counter-clockwise-button {
-  background-image: url(https://cdn.glitch.com/61ae5b6a-e084-43e1-9667-ae000b4f3e81%2F498-4980685_3d-rotate-icon-3d-rotation-icon-png-transparent.png?v=1619382058528);
+  background-image: url(https://i.postimg.cc/65Dm8tzt/61ae5b6a-e084-43e1-9667-ae000b4f3e81-498-4980685-3d-rotate-icon-3d-rotation-icon-png-transparent.png);
   background-size: 100% 100%;
 }
 
